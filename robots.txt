@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://superscanny.github.io/sitemap.xml
