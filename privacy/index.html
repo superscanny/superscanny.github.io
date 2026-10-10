@@ -25,7 +25,7 @@
       <a href="../terms/index.html">Terms</a>
     </nav>
     <a class="store sm" href="https://apps.apple.com/app/id6795710707" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.050 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       <span><strong>Download</strong></span>
     </a>
   </div>
@@ -41,107 +41,137 @@
 
 <main class="legal">
   <h2>1. Overview</h2>
-  <p>Super Scanny ("we", "us", or "our") is a food and cosmetic product scanning app for iOS. This Privacy Policy explains what information we collect, how we use it, and how we protect it. We collect only what is needed to provide the service.</p>
+  <p>Super Scanny ("we", "us", or "our") is a food and cosmetic product scanning app for iOS. This Privacy Policy explains what information the app and our services handle, who we share it with, how long it is kept, and how to contact us.</p>
   <div class="note">
-    <p><strong>Short version:</strong> Your dietary preferences, scan history, and favourites are stored only on your device. Photos you scan are sent for analysis and are not kept. Our servers store only an anonymous device identifier, your Apple account ID if you sign in with Apple, and daily usage counts. We do not sell your data.</p>
+    <p><strong>Short version:</strong> Your profile, dietary and allergen preferences, household members, profile photo and scan history are kept on your device and are not sent to our server. Product details and the photos you choose to scan are sent through our server to AI and product-data services so we can analyse them. Our server keeps a small device record (an anonymous device credential, your Apple account ID if you sign in with Apple, a billing ID and daily usage counts). Service providers such as RevenueCat, Sentry and our hosting provider keep their own records. We do not sell your data.</p>
   </div>
 
-  <h2>2. Information we collect</h2>
-
-  <h3>2a. Stored on your device only</h3>
-  <p>The following information is saved locally in the app using iOS device storage and is never sent to our servers:</p>
+  <h2>2. Information stored on your device</h2>
+  <p>The following is saved in the app's storage on your iPhone:</p>
   <ul>
-    <li><strong>Display name</strong>: the name you choose when setting up your profile</li>
-    <li><strong>Email address</strong>: shown in your profile only; not collected or stored by our servers</li>
-    <li><strong>Dietary profile</strong>: your allergies, intolerances, diet type (for example vegan or halal), and health goals</li>
-    <li><strong>Scan history</strong>: the products you have scanned, including product name, barcode, health score, and scan date</li>
-    <li><strong>Favourites</strong>: products you have saved</li>
-    <li><strong>App settings</strong>: theme, text size, notification preferences, and similar settings</li>
+    <li><strong>Profile:</strong> the display name and email address shown in your profile, and an optional profile photo</li>
+    <li><strong>Dietary and allergen preferences:</strong> allergies, intolerances, diet type (for example vegan or halal), health goals, nutrient thresholds and ingredient alerts</li>
+    <li><strong>Household members:</strong> names and allergies you add for other people</li>
+    <li><strong>Scan history, favourites and shopping lists:</strong> products you have scanned or saved, with their scores and dates. History keeps up to 50 scans on the free plan and up to 200 with Premium.</li>
+    <li><strong>App settings:</strong> theme, text size, notification preferences and similar settings</li>
+    <li><strong>Sign-in credentials:</strong> a device credential and, if you sign in with Apple, an Apple token used to revoke Sign in with Apple when you delete your account. These are kept in the iOS Keychain.</li>
   </ul>
+  <p>We do not send your profile, dietary or allergen preferences, household members, profile photo, scan history, favourites or shopping lists to our server. Allergy warnings are calculated on your device.</p>
 
-  <h3>2b. Stored on our servers</h3>
-  <p>Our backend (hosted on Railway) stores the following minimal information to provide the service:</p>
+  <h2>3. Information sent to our server</h2>
+  <p>Our backend is hosted by Railway in the United States. When you use the app, it sends:</p>
   <ul>
-    <li><strong>Anonymous device token</strong>: a randomly generated identifier stored as a one-way SHA-256 hash. We never store the raw token. It is used to authenticate your requests without identifying you personally.</li>
-    <li><strong>Apple User ID</strong>: if you sign in with Apple, we store Apple's anonymous, app-scoped user identifier (a long opaque string such as <code>000000.abc123...</code>). This lets us recognise your account across reinstalls without exposing your name or email. Apple controls this identifier.</li>
-    <li><strong>Daily scan usage counters</strong>: we count how many scans your device performs each day to enforce daily limits. These counters reset daily and contain no product or personal data.</li>
-    <li><strong>Products you add</strong>: if you add a missing product, the product details you enter (barcode, name, brand, quantity, category, ingredients, and nutrition values) are saved to a shared product database so other users can see them. These entries do not include your name, email, or any account identifier.</li>
+    <li><strong>Product details</strong> such as name, brand, barcode, ingredients and nutrition values, so the product can be scored and analysed.</li>
+    <li><strong>Photos you choose to scan</strong>, including product photos, label photos and shelf images. Photos are processed in memory and forwarded to Google Gemini (see section 5). Our server does not write them to its database or disk and does not log them.</li>
+    <li><strong>Products you add.</strong> If you add a missing product, the details you enter (barcode, name, brand, quantity, category, ingredients and nutrition values) are saved to a shared product database that other users can see. These entries do not include your name, email or any account identifier.</li>
+    <li><strong>Your device credential</strong> with each request, so we can authenticate the app and apply daily limits.</li>
+    <li><strong>Push notification token.</strong> If you allow notifications, the app sends its push notification token to our server. We keep it only in server memory, not in our database, and it is cleared whenever the server restarts. Streak reminders are scheduled on your device.</li>
+    <li><strong>Sign in with Apple authorization code.</strong> When you sign in with Apple, our server exchanges a one-time code with Apple and returns a token to your device. The server does not keep that token.</li>
   </ul>
-
-  <h3>2c. Information we do not collect</h3>
+  <p>For each device, our database keeps a <strong>device record</strong> containing:</p>
   <ul>
-    <li>Stored photos. Photos you take for a picture, label, or shelf scan pass through our server to Google Gemini for analysis and are not saved on our servers.</li>
-    <li>Location data</li>
-    <li>Contacts or address book</li>
-    <li>Advertising or device identifiers such as IDFA or IDFV</li>
-    <li>Browsing history</li>
+    <li>a one-way SHA-256 hash of the device credential (never the credential itself)</li>
+    <li>your Apple User ID, if you sign in with Apple. This is Apple's anonymous, app-specific identifier, a long string such as <code>000000.abc123...</code></li>
+    <li>a <strong>billing ID</strong>: a random identifier we create to link subscription status to your device or Apple account. It is not derived from your name, email or Apple ID.</li>
+    <li>today's photo and analysis counts, which are overwritten each day</li>
+    <li>whether the device is a guest, and when the record was created, last used, expires or was revoked</li>
   </ul>
+  <p>Our hosting provider also records standard access logs for requests to our server, such as IP address, request path, time and app version.</p>
 
-  <h2>3. How we use your information</h2>
+  <h2>4. How we use information</h2>
   <div class="table-wrap">
     <table>
-      <tr><th>Purpose</th><th>Data used</th></tr>
-      <tr><td>Providing the scanning and scoring service</td><td>Product details sent to Google Gemini AI (see section 4)</td></tr>
-      <tr><td>Identifying products from photos</td><td>The photo you take, sent to Google Gemini AI and not stored by us</td></tr>
-      <tr><td>Filling in missing products for everyone</td><td>Product details you submit (no personal data)</td></tr>
-      <tr><td>Authenticating your requests</td><td>Hashed device token</td></tr>
-      <tr><td>Recognising your account after a reinstall</td><td>Apple User ID (if you sign in with Apple)</td></tr>
-      <tr><td>Enforcing daily scan limits</td><td>Daily usage counters</td></tr>
-      <tr><td>Crash reporting and error monitoring</td><td>Anonymous crash reports (see section 4, Sentry)</td></tr>
-      <tr><td>Personalising allergy and diet warnings</td><td>Dietary profile (stored on your device only)</td></tr>
+      <tr><th>Purpose</th><th>Information used</th></tr>
+      <tr><td>Scoring and analysing products</td><td>Product details, sent to Google Gemini, Tavily and product databases (section 5)</td></tr>
+      <tr><td>Identifying products from photos</td><td>The photo you take, sent to Google Gemini</td></tr>
+      <tr><td>Filling in missing products for everyone</td><td>Product details you submit</td></tr>
+      <tr><td>Authenticating the app and applying daily limits</td><td>Device record</td></tr>
+      <tr><td>Recognising your account across devices and reinstalls</td><td>Apple User ID, if you sign in with Apple</td></tr>
+      <tr><td>Checking whether you have Premium</td><td>Billing ID, checked with RevenueCat</td></tr>
+      <tr><td>Fixing crashes and errors</td><td>Diagnostic data sent to Sentry</td></tr>
+      <tr><td>Allergy and diet warnings</td><td>Your preferences, on your device only</td></tr>
     </table>
   </div>
 
-  <h2>4. Third-party services</h2>
-  <p>Super Scanny uses the following third-party services. Each has its own privacy policy, linked below.</p>
+  <h2>5. Service providers and third parties</h2>
+  <p>We share information only as described below. Each provider handles data under its own terms and privacy policy.</p>
 
-  <h3>Google Gemini AI</h3>
-  <p>When you scan a product, its details (such as name, ingredients, and nutrition values) are sent through our server to Google's Gemini AI service to generate a health score and analysis. When you use a picture, label, or shelf scan, the photo you take is also sent so Gemini can identify the products in it. <strong>Your name, email, and dietary profile are never included in these requests.</strong> We do not store the photos. Please avoid photographing people or personal documents when scanning.</p>
+  <p><strong>AI features are optional.</strong> The app asks before using them. You can turn them off at any time in <strong>Profile → AI features</strong>. With AI off, the app does not send product details or photos to AI or web-search providers, and barcode scans still show basic scores when product data is available.</p>
+
+  <h3>Google Gemini (AI analysis)</h3>
+  <p>Our server sends product details, and the photos and shelf images you choose to scan, to Google's Gemini API to generate scores, analyses and product identifications. We do not include your name, email, dietary profile or household members. Google processes this content under the Gemini API terms. Those terms allow Google to keep submitted content for a limited time, for example for abuse monitoring, and on some service tiers to use it to improve Google's services. We do not control how long Google keeps it.</p>
   <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
-  <h3>Sign in with Apple</h3>
-  <p>If you sign in with Apple, Apple authenticates you and provides an anonymous, app-scoped user identifier. Apple may share a private relay email address. We do not receive your real email unless you choose to share it. Apple's privacy practices govern this flow.</p>
-  <p><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></p>
+  <h3>Tavily (web search)</h3>
+  <p>To find reviews, product information or alternatives, our server may send product names, brands, barcodes and search phrases to Tavily, a web search service. No personal information is included.</p>
+  <p><a href="https://tavily.com/privacy" target="_blank" rel="noopener">Tavily Privacy Policy</a></p>
 
-  <h3>Sign in with Google</h3>
-  <p>If you sign in with Google, we receive your display name and email address to create your in-app profile. This information is stored on your device only. We do not send it to our servers.</p>
-  <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+  <h3>Open Food Facts and Open Beauty Facts</h3>
+  <p>The app looks up products directly from Open Food Facts and Open Beauty Facts, using barcodes, categories and search terms. Because these requests come from your device, those services can see your IP address, as with any website request.</p>
+  <p><a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">Open Food Facts Privacy Policy</a></p>
 
-  <h3>RevenueCat</h3>
-  <p>We use RevenueCat to manage in-app subscriptions and purchases. RevenueCat may collect your device identifier and purchase history to verify your subscription status. RevenueCat does not receive your dietary profile, scan history, or personal health data.</p>
+  <h3>USDA FoodData Central</h3>
+  <p>When a product isn't found elsewhere, our server may look up its barcode in the U.S. Department of Agriculture's FoodData Central database. Only the barcode is sent.</p>
+
+  <h3>RevenueCat (subscriptions)</h3>
+  <p>We use RevenueCat to process and verify in-app subscriptions. The app identifies itself to RevenueCat with your billing ID. RevenueCat receives purchase and subscription information from the App Store, along with technical information such as app version, platform and IP address. Our server asks RevenueCat whether a billing ID has an active subscription. RevenueCat does not receive your dietary profile, scan history or health preferences.</p>
   <p><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></p>
 
-  <h3>Railway</h3>
-  <p>Our backend API and PostgreSQL database are hosted on Railway. All data stored on Railway is described in section 2b. Railway's infrastructure is located in the United States.</p>
-  <p><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">Railway Privacy Policy</a></p>
-
-  <h3>Sentry</h3>
-  <p>We use Sentry to capture anonymised crash reports and error logs. Sentry does not receive your name, email, dietary profile, scan history, or product data. Crash reports contain only technical information such as iOS version, app version, and stack traces.</p>
+  <h3>Sentry (error monitoring)</h3>
+  <p>The app sends crash reports and error reports to Sentry. These can include device model, iOS version, app version, the screens and actions leading up to an error, error messages, and the addresses of network requests the app made. Those addresses can contain product names, barcodes or search terms. Sentry may also process your IP address. We do not intentionally send your name, email, dietary profile, household members, sign-in tokens or photos to Sentry.</p>
   <p><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy</a></p>
 
-  <h2>5. Data retention</h2>
+  <h3>Railway (hosting)</h3>
+  <p>Our server and database run on Railway in the United States. Railway stores the device records described in section 3 and keeps access logs.</p>
+  <p><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">Railway Privacy Policy</a></p>
+
+  <h3>Expo (app updates and notifications)</h3>
+  <p>The app downloads updates from Expo's servers. If you allow notifications, Expo issues the app's push notification token. Expo can see your IP address when the app contacts it.</p>
+  <p><a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></p>
+
+  <h3>Sign in with Apple and Sign in with Google</h3>
+  <p>With Sign in with Apple, Apple gives the app an anonymous, app-specific user ID and may share your email address or a private relay address. Our server verifies Apple's identity token, which can contain that email address, and keeps only the anonymous user ID. Your name and email stay on your device. Sign in with Google is not currently offered for new sign-ins. If you signed in with Google in an earlier version, your device received your name and email address directly from Google and keeps them on your device. We do not send them to our server.</p>
+  <p><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+  <h2>6. What we don't do</h2>
   <ul>
-    <li><strong>Device tokens</strong> expire automatically after 90 days of inactivity (30 days for guest accounts). Expired tokens are permanently deleted from our database.</li>
-    <li><strong>Apple User IDs</strong> are kept while your account is active and deleted when you delete your account (see section 6).</li>
-    <li><strong>Daily scan counters</strong> reset every 24 hours. Historical counters are not kept.</li>
-    <li><strong>On-device data</strong> is kept until you delete the app or delete your account.</li>
+    <li>We do not sell your personal information.</li>
+    <li>We do not use advertising identifiers or track you across other companies' apps or websites.</li>
+    <li>We do not collect your location, contacts or browsing history.</li>
   </ul>
 
-  <h2>6. Your rights and account deletion</h2>
-  <p>You can delete your account at any time from within the app: <strong>Profile → side menu → Delete account</strong>.</p>
-  <p>Deleting your account permanently removes your Apple User ID and device token from our servers. On-device data (scan history, dietary profile, favourites) is also erased from your device. This cannot be undone.</p>
-  <p>To request manual deletion or to ask about your data, email <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a>.</p>
+  <h2>7. Data retention</h2>
+  <ul>
+    <li><strong>On your device:</strong> kept until you delete it, delete your account, or delete the app.</li>
+    <li><strong>Device records:</strong> device credentials expire after 90 days without use. A guest credential that is never used expires after 30 days. Revoked or expired device records may be retained for security, fraud prevention, operational integrity, and legal compliance.</li>
+    <li><strong>Daily counts:</strong> only the current day's count is kept; it is overwritten each day.</li>
+    <li><strong>Products you add:</strong> kept in the shared product database.</li>
+    <li><strong>Push notification tokens and temporary analysis caches:</strong> held in server memory only and cleared when the server restarts.</li>
+    <li><strong>Service providers:</strong> Google, Tavily, RevenueCat, Sentry, Railway and Expo keep data according to their own retention policies.</li>
+  </ul>
 
-  <h2>7. Children's privacy</h2>
-  <p>Super Scanny is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, contact us and we will delete it promptly.</p>
+  <h2>8. Account deletion</h2>
+  <p>You can delete your account in the app: <strong>Profile → side menu → Delete account</strong>. When you do:</p>
+  <ul>
+    <li>The data stored on your device (profile, preferences, household members, history, favourites, lists and settings) is erased.</li>
+    <li>Your device credentials are revoked, so they can no longer be used, and Sign in with Apple is revoked for this app.</li>
+    <li>Server-side device records, including the Apple User ID and billing ID, may be retained in revoked form for security, fraud prevention, auditing and legal purposes.</li>
+    <li>Records held by RevenueCat and other service providers are kept under their own policies.</li>
+    <li><strong>Deleting your account does not cancel a subscription.</strong> Cancel it in iPhone Settings → your name → Subscriptions.</li>
+  </ul>
+  <p>To ask about your data, or to request deletion of server-side records, email <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a>. We will respond within a reasonable time and as required by applicable law.</p>
 
-  <h2>8. Data transfers</h2>
-  <p>Our servers are located in the United States (Railway infrastructure). By using the app, you consent to your device token and, if applicable, your Apple User ID being processed in the United States. We protect this data in transit using TLS encryption.</p>
+  <h2>9. Children's privacy</h2>
+  <p>Super Scanny is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, contact us and we will delete it.</p>
 
-  <h2>9. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will notify you in the app. Continuing to use the app after a change means you accept the updated policy.</p>
+  <h2>10. International transfers</h2>
+  <p>Our server and several of our service providers are located in the United States. By using the app, you understand that the information described in this policy may be processed in the United States. Data sent between the app and our server is encrypted in transit using TLS.</p>
 
-  <h2>10. Contact us</h2>
+  <h2>11. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will notify you in the app.</p>
+
+  <h2>12. Contact us</h2>
+  <p>For privacy questions or deletion requests, contact us:</p>
   <div class="note">
     <p><strong>Email:</strong> <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a><br>
     <strong>App:</strong> Super Scanny for iPhone<br>
