@@ -35,7 +35,7 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1 class="h-display">Privacy Policy</h1>
-    <p>Effective 10 October 2026 · Last updated 10 October 2026</p>
+    <p>Effective 10 October 2026 · Last updated 12 October 2026</p>
   </div>
 </div>
 
@@ -43,7 +43,7 @@
   <h2>1. Overview</h2>
   <p>Super Scanny ("we", "us", or "our") is a food and cosmetic product scanning app for iOS. This Privacy Policy explains what information the app and our services handle, who we share it with, how long it is kept, and how to contact us.</p>
   <div class="note">
-    <p><strong>Short version:</strong> Your profile, dietary and allergen preferences, household members, profile photo and scan history are kept on your device and are not sent to our server. Product details and the photos you choose to scan are sent through our server to AI and product-data services so we can analyse them. Our server keeps a small device record (an anonymous device credential, your Apple account ID if you sign in with Apple, a billing ID and daily usage counts). Service providers such as RevenueCat, Sentry and our hosting provider keep their own records. We do not sell your data.</p>
+    <p><strong>Short version:</strong> Your profile, dietary and allergen preferences, household members, profile photo and scan history are kept on your device and are not sent to our server. Product details and the photos you choose to scan are sent through our server to AI and product-data services so we can analyse them. If you submit a product report ("Is this information wrong?"), we store the barcode, issue type, your optional note and the time — but not your name, account or device identifier. Our server keeps a small device record (an anonymous device credential, your Apple or Google account ID if you sign in with one of them, a billing ID and daily usage counts). Service providers such as RevenueCat, Sentry and our hosting provider keep their own records. We do not sell your data.</p>
   </div>
 
   <h2>2. Information stored on your device</h2>
@@ -63,7 +63,8 @@
   <ul>
     <li><strong>Product details</strong> such as name, brand, barcode, ingredients and nutrition values, so the product can be scored and analysed.</li>
     <li><strong>Photos you choose to scan</strong>, including product photos, label photos and shelf images. Photos are processed in memory and forwarded to Google Gemini (see section 5). Our server does not write them to its database or disk and does not log them.</li>
-    <li><strong>Products you add.</strong> If you add a missing product, the details you enter (barcode, name, brand, quantity, category, ingredients and nutrition values) are saved to a shared product database that other users can see. These entries do not include your name, email or any account identifier.</li>
+    <li><strong>Products you add.</strong> If you add a missing product, the details you enter (barcode, name, brand, quantity, category, ingredients and nutrition values) are saved to a shared product database that other users can see. These entries do not include your name, email or any account identifier. When you submit a product, our server sends its details to Google Gemini to check them for accuracy, whether or not AI features are turned on. A copy is also cached on your device so it appears straight away.</li>
+    <li><strong>Product reports.</strong> If you use the "Is this information wrong?" feature, the app sends the product barcode, the issue type you selected (such as "wrong ingredients" or "wrong allergen"), your optional note (up to 500 characters) and the time of submission to our server. We store this information to review and correct product data. <strong>We do not store your name, email address, account identifier, device identifier or IP address with a report.</strong> The note should describe the product issue only and should not contain personal information. The daily rate is limited to 10 reports per device and 2 reports per product per day.</li>
     <li><strong>Your device credential</strong> with each request, so we can authenticate the app and apply daily limits.</li>
     <li><strong>Push notification token.</strong> If you allow notifications, the app sends its push notification token to our server. We keep it only in server memory, not in our database, and it is cleared whenever the server restarts. Streak reminders are scheduled on your device.</li>
     <li><strong>Sign in with Apple authorization code.</strong> When you sign in with Apple, our server exchanges a one-time code with Apple and returns a token to your device. The server does not keep that token.</li>
@@ -72,6 +73,7 @@
   <ul>
     <li>a one-way SHA-256 hash of the device credential (never the credential itself)</li>
     <li>your Apple User ID, if you sign in with Apple. This is Apple's anonymous, app-specific identifier, a long string such as <code>000000.abc123...</code></li>
+    <li>your Google account ID, if you sign in with Google. This is a numeric identifier Google assigns to your account; we do not store your Google email address or name.</li>
     <li>a <strong>billing ID</strong>: a random identifier we create to link subscription status to your device or Apple account. It is not derived from your name, email or Apple ID.</li>
     <li>today's photo and analysis counts, which are overwritten each day</li>
     <li>whether the device is a guest, and when the record was created, last used, expires or was revoked</li>
@@ -85,8 +87,9 @@
       <tr><td>Scoring and analysing products</td><td>Product details, sent to Google Gemini, Tavily and product databases (section 5)</td></tr>
       <tr><td>Identifying products from photos</td><td>The photo you take, sent to Google Gemini</td></tr>
       <tr><td>Filling in missing products for everyone</td><td>Product details you submit</td></tr>
+      <tr><td>Reviewing and correcting product data</td><td>Product report: barcode, issue type, note and timestamp (no personal identifier)</td></tr>
       <tr><td>Authenticating the app and applying daily limits</td><td>Device record</td></tr>
-      <tr><td>Recognising your account across devices and reinstalls</td><td>Apple User ID, if you sign in with Apple</td></tr>
+      <tr><td>Recognising your account across devices and reinstalls</td><td>Apple User ID or Google account ID, if you sign in with Apple or Google</td></tr>
       <tr><td>Checking whether you have Premium</td><td>Billing ID, checked with RevenueCat</td></tr>
       <tr><td>Fixing crashes and errors</td><td>Diagnostic data sent to Sentry</td></tr>
       <tr><td>Allergy and diet warnings</td><td>Your preferences, on your device only</td></tr>
@@ -96,7 +99,7 @@
   <h2>5. Service providers and third parties</h2>
   <p>We share information only as described below. Each provider handles data under its own terms and privacy policy.</p>
 
-  <p><strong>AI features are optional.</strong> The app asks before using them. You can turn them off at any time in <strong>Profile → AI features</strong>. With AI off, the app does not send product details or photos to AI or web-search providers, and barcode scans still show basic scores when product data is available.</p>
+  <p><strong>AI features are optional.</strong> The app asks before using them. You can turn them off at any time in <strong>Profile → AI features</strong>. With AI off, the app does not send product details or photos to AI or web-search providers, except when you add a missing product (see "Products you add" in section 3). Barcode scans still show basic scores when product data is available.</p>
 
   <h3>Google Gemini (AI analysis)</h3>
   <p>Our server sends product details, and the photos and shelf images you choose to scan, to Google's Gemini API to generate scores, analyses and product identifications. We do not include your name, email, dietary profile or household members. Google processes this content under the Gemini API terms. Those terms allow Google to keep submitted content for a limited time, for example for abuse monitoring, and on some service tiers to use it to improve Google's services. We do not control how long Google keeps it.</p>
@@ -130,7 +133,7 @@
   <p><a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></p>
 
   <h3>Sign in with Apple and Sign in with Google</h3>
-  <p>With Sign in with Apple, Apple gives the app an anonymous, app-specific user ID and may share your email address or a private relay address. Our server verifies Apple's identity token, which can contain that email address, and keeps only the anonymous user ID. Your name and email stay on your device. Sign in with Google is not currently offered for new sign-ins. If you signed in with Google in an earlier version, your device received your name and email address directly from Google and keeps them on your device. We do not send them to our server.</p>
+  <p>With Sign in with Apple, Apple gives the app an anonymous, app-specific user ID and may share your email address or a private relay address. Our server verifies Apple's identity token, which can contain that email address, and keeps only the anonymous user ID. Your name and email stay on your device. With Sign in with Google, your device receives your name and email address directly from Google and keeps them on your device. Our server verifies Google's ID token, which can contain your email address, and keeps only Google's account ID.</p>
   <p><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
 
   <h2>6. What we don't do</h2>
@@ -146,6 +149,7 @@
     <li><strong>Device records:</strong> device credentials expire after 90 days without use. A guest credential that is never used expires after 30 days. Revoked or expired device records may be retained for security, fraud prevention, operational integrity, and legal compliance.</li>
     <li><strong>Daily counts:</strong> only the current day's count is kept; it is overwritten each day.</li>
     <li><strong>Products you add:</strong> kept in the shared product database.</li>
+    <li><strong>Product reports:</strong> kept until we have reviewed and acted on the report. We may retain aggregated statistics (report counts per product) after individual reports are deleted.</li>
     <li><strong>Push notification tokens and temporary analysis caches:</strong> held in server memory only and cleared when the server restarts.</li>
     <li><strong>Service providers:</strong> Google, Tavily, RevenueCat, Sentry, Railway and Expo keep data according to their own retention policies.</li>
   </ul>
@@ -155,7 +159,7 @@
   <ul>
     <li>The data stored on your device (profile, preferences, household members, history, favourites, lists and settings) is erased.</li>
     <li>Your device credentials are revoked, so they can no longer be used, and Sign in with Apple is revoked for this app.</li>
-    <li>Server-side device records, including the Apple User ID and billing ID, may be retained in revoked form for security, fraud prevention, auditing and legal purposes.</li>
+    <li>Server-side device records, including the Apple User ID or Google account ID and the billing ID, may be retained in revoked form for security, fraud prevention, auditing and legal purposes.</li>
     <li>Records held by RevenueCat and other service providers are kept under their own policies.</li>
     <li><strong>Deleting your account does not cancel a subscription.</strong> Cancel it in iPhone Settings → your name → Subscriptions.</li>
   </ul>
