@@ -35,7 +35,7 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1 class="h-display">Privacy Policy</h1>
-    <p>Effective 10 October 2026 · Last updated 12 October 2026</p>
+    <p>Effective 10 October 2026 · Last updated 3 November 2026</p>
   </div>
 </div>
 
@@ -66,6 +66,7 @@
     <li><strong>Products you add.</strong> If you add a missing product, the details you enter (barcode, name, brand, quantity, category, ingredients and nutrition values) are saved to a shared product database that other users can see. These entries do not include your name, email or any account identifier. When you submit a product, our server sends its details to Google Gemini to check them for accuracy, whether or not AI features are turned on. A copy is also cached on your device so it appears straight away.</li>
     <li><strong>Product reports.</strong> If you use the "Is this information wrong?" feature, the app sends the product barcode, the issue type you selected (such as "wrong ingredients" or "wrong allergen"), your optional note (up to 500 characters) and the time of submission to our server. We store this information to review and correct product data. <strong>We do not store your name, email address, account identifier, device identifier or IP address with a report.</strong> The note should describe the product issue only and should not contain personal information. The daily rate is limited to 10 reports per device and 2 reports per product per day.</li>
     <li><strong>Your device credential</strong> with each request, so we can authenticate the app and apply daily limits.</li>
+    <li><strong>Search phrases on the free plan.</strong> To count your 5 free searches a day without counting a repeated search twice, the app sends each search phrase to our server, which keeps that day's phrases in server memory only, with the hash of your device credential, for at most two days.</li>
     <li><strong>Push notification token.</strong> If you allow notifications, the app sends its push notification token to our server. We keep it only in server memory, not in our database, and it is cleared whenever the server restarts. Streak reminders are scheduled on your device.</li>
     <li><strong>Sign in with Apple authorization code.</strong> When you sign in with Apple, our server exchanges a one-time code with Apple and returns a token to your device. The server does not keep that token.</li>
   </ul>
@@ -88,7 +89,7 @@
       <tr><td>Identifying products from photos</td><td>The photo you take, sent to Google Gemini</td></tr>
       <tr><td>Filling in missing products for everyone</td><td>Product details you submit</td></tr>
       <tr><td>Reviewing and correcting product data</td><td>Product report: barcode, issue type, note and timestamp (no personal identifier)</td></tr>
-      <tr><td>Authenticating the app and applying daily limits</td><td>Device record</td></tr>
+      <tr><td>Authenticating the app and applying daily limits</td><td>Device record, and search phrases on the free plan</td></tr>
       <tr><td>Recognising your account across devices and reinstalls</td><td>Apple User ID or Google account ID, if you sign in with Apple or Google</td></tr>
       <tr><td>Checking whether you have Premium</td><td>Billing ID, checked with RevenueCat</td></tr>
       <tr><td>Fixing crashes and errors</td><td>Diagnostic data sent to Sentry</td></tr>
@@ -150,7 +151,7 @@
     <li><strong>Daily counts:</strong> only the current day's count is kept; it is overwritten each day.</li>
     <li><strong>Products you add:</strong> kept in the shared product database.</li>
     <li><strong>Product reports:</strong> kept until we have reviewed and acted on the report. We may retain aggregated statistics (report counts per product) after individual reports are deleted.</li>
-    <li><strong>Push notification tokens and temporary analysis caches:</strong> held in server memory only and cleared when the server restarts.</li>
+    <li><strong>Push notification tokens, free-plan search phrases and temporary analysis caches:</strong> held in server memory only and cleared when the server restarts. Search phrases are also cleared within two days.</li>
     <li><strong>Service providers:</strong> Google, Tavily, RevenueCat, Sentry, Railway and Expo keep data according to their own retention policies.</li>
   </ul>
 
