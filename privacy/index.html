@@ -35,13 +35,13 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1 class="h-display">Privacy Policy</h1>
-    <p>Effective 10 October 2026 · Last updated 3 November 2026</p>
+    <p>Effective 10 October 2026 · Last updated 14 November 2026</p>
   </div>
 </div>
 
 <main class="legal">
   <h2>1. Overview</h2>
-  <p>Super Scanny ("we", "us", or "our") is a food and cosmetic product scanning app for iOS. This Privacy Policy explains what information the app and our services handle, who we share it with, how long it is kept, and how to contact us.</p>
+  <p>Super Scanny ("we", "us", or "our") is a food and cosmetic product scanning app for iOS and Android. This Privacy Policy explains what information the app and our services handle, who we share it with, how long it is kept, and how to contact us.</p>
   <div class="note">
     <p><strong>Short version:</strong> Your profile, dietary and allergen preferences, household members, profile photo and scan history are kept on your device and are not sent to our server. Product details and the photos you choose to scan are sent through our server to AI and product-data services so we can analyse them. If you submit a product report ("Is this information wrong?"), we store the barcode, issue type, your optional note and the time — but not your name, account or device identifier. Our server keeps a small device record (an anonymous device credential, your Apple or Google account ID if you sign in with one of them, a billing ID and daily usage counts). Service providers such as RevenueCat, Sentry and our hosting provider keep their own records. We do not sell your data.</p>
   </div>
@@ -54,7 +54,7 @@
     <li><strong>Household members:</strong> names and allergies you add for other people</li>
     <li><strong>Scan history, favourites and shopping lists:</strong> products you have scanned or saved, with their scores and dates. History keeps up to 50 scans on the free plan and up to 200 with Premium.</li>
     <li><strong>App settings:</strong> theme, text size, notification preferences and similar settings</li>
-    <li><strong>Sign-in credentials:</strong> a device credential and, if you sign in with Apple, an Apple token used to revoke Sign in with Apple when you delete your account. These are kept in the iOS Keychain.</li>
+    <li><strong>Sign-in credentials:</strong> a device credential and, if you sign in with Apple, an Apple token used to revoke Sign in with Apple when you delete your account. These are kept in the secure storage provided by your phone (the iOS Keychain, or Android Keystore-backed storage).</li>
   </ul>
   <p>We do not send your profile, dietary or allergen preferences, household members, profile photo, scan history, favourites or shopping lists to our server. Allergy warnings are calculated on your device.</p>
 
@@ -118,11 +118,12 @@
   <p>When a product isn't found elsewhere, our server may look up its barcode in the U.S. Department of Agriculture's FoodData Central database. Only the barcode is sent.</p>
 
   <h3>RevenueCat (subscriptions)</h3>
-  <p>We use RevenueCat to process and verify in-app subscriptions. The app identifies itself to RevenueCat with your billing ID. RevenueCat receives purchase and subscription information from the App Store, along with technical information such as app version, platform and IP address. Our server asks RevenueCat whether a billing ID has an active subscription. RevenueCat does not receive your dietary profile, scan history or health preferences.</p>
+  <p>We use RevenueCat to process and verify in-app subscriptions. The app identifies itself to RevenueCat with your billing ID. RevenueCat receives purchase and subscription information from the App Store or Google Play, along with technical information such as app version, platform and IP address. Our server asks RevenueCat whether a billing ID has an active subscription. RevenueCat does not receive your dietary profile, scan history or health preferences.</p>
   <p><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></p>
 
   <h3>Sentry (error monitoring)</h3>
-  <p>The app sends crash reports and error reports to Sentry. These can include device model, iOS version, app version, the screens and actions leading up to an error, error messages, and the addresses of network requests the app made. Those addresses can contain product names, barcodes or search terms. Sentry may also process your IP address. We do not intentionally send your name, email, dietary profile, household members, sign-in tokens or photos to Sentry.</p>
+  <p>The app sends crash reports and error reports to Sentry. These can include device model, operating system version, app version, the screens and actions leading up to an error, error messages, and the addresses of network requests the app made. Those addresses can contain product names, barcodes or search terms. Sentry may also process your IP address. We do not intentionally send your name, email, dietary profile, household members, sign-in tokens or photos to Sentry.</p>
+  <p>Our server also sends its own error reports to Sentry. These contain the error and the server route it happened on. They do not include your account identifiers, device credential, photos or the contents of your requests.</p>
   <p><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy</a></p>
 
   <h3>Railway (hosting)</h3>
@@ -130,7 +131,7 @@
   <p><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">Railway Privacy Policy</a></p>
 
   <h3>Expo (app updates and notifications)</h3>
-  <p>The app downloads updates from Expo's servers. If you allow notifications, Expo issues the app's push notification token. Expo can see your IP address when the app contacts it.</p>
+  <p>The app downloads updates from Expo's servers. If you allow notifications, Expo issues the app's push notification token. On Android the app does not currently request a push token; reminders are scheduled on your phone. Expo can see your IP address when the app contacts it.</p>
   <p><a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></p>
 
   <h3>Sign in with Apple and Sign in with Google</h3>
@@ -156,13 +157,13 @@
   </ul>
 
   <h2>8. Account deletion</h2>
-  <p>You can delete your account in the app: <strong>Profile → side menu → Delete account</strong>. When you do:</p>
+  <p>You can delete your account in the app, on iPhone and Android: <strong>Profile → side menu → Delete account</strong>. If you cannot open the app, see <a href="/delete-account/">how to delete your account</a>. When you delete it in the app:</p>
   <ul>
     <li>The data stored on your device (profile, preferences, household members, history, favourites, lists and settings) is erased.</li>
     <li>Your device credentials are revoked, so they can no longer be used, and Sign in with Apple is revoked for this app.</li>
     <li>Server-side device records, including the Apple User ID or Google account ID and the billing ID, may be retained in revoked form for security, fraud prevention, auditing and legal purposes.</li>
     <li>Records held by RevenueCat and other service providers are kept under their own policies.</li>
-    <li><strong>Deleting your account does not cancel a subscription.</strong> Cancel it in iPhone Settings → your name → Subscriptions.</li>
+    <li><strong>Deleting your account does not cancel a subscription.</strong> Cancel it in iPhone Settings → your name → Subscriptions, or on Android in Play Store → Payments &amp; subscriptions → Subscriptions.</li>
   </ul>
   <p>To ask about your data, or to request deletion of server-side records, email <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a>. We will respond within a reasonable time and as required by applicable law.</p>
 
