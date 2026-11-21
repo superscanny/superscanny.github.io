@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy for Android · Super Scanny</title>
+<meta name="description" content="How the Super Scanny Android app collects, uses and protects your information.">
+<link rel="canonical" href="https://superscanny.github.io/android/privacy/">
+<meta property="og:title" content="Privacy Policy for Android · Super Scanny">
+<meta property="og:url" content="https://superscanny.github.io/android/privacy/">
+<link rel="icon" href="../../icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap">
+<link rel="stylesheet" href="../../site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../../index.html"><img src="../../icon.png" alt="" width="34" height="34">Super Scanny</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../../index.html">Home</a>
+      <a href="../privacy/index.html" aria-current="page">Privacy (Android)</a>
+      <a href="../terms/index.html">Terms (Android)</a>
+      <a href="../delete-account/index.html">Delete account</a>
+    </nav>
+  </div>
+</header>
+
+<div class="legal-head">
+  <div class="wrap">
+    <span class="eyebrow">Legal · Android</span>
+    <h1 class="h-display">Privacy Policy</h1>
+    <p>Super Scanny for Android · Effective 21 November 2026</p>
+  </div>
+</div>
+
+<main class="legal">
+  <h2>1. Overview</h2>
+  <p>This Privacy Policy applies to the Super Scanny app for Android (package <code>com.superscanny.app</code>), a food and cosmetic product scanning app. "We", "us" and "our" mean the developer of Super Scanny. This policy explains what information the app and our services handle, who we share it with, how long it is kept, and how to contact us.</p>
+  <div class="note">
+    <p><strong>Short version:</strong> Your profile, dietary and allergen preferences, household members and scan history are kept on your phone and are not sent to our server. Product details, and the photos you choose to scan, are sent through our server to AI and product-data services so they can be analysed. Our server keeps a small device record (an anonymous device credential, a billing ID and daily usage counts). Service providers such as RevenueCat, Sentry and our hosting provider keep their own records. The app has no ads, and we do not sell your data.</p>
+  </div>
+
+  <h2>2. Information stored on your phone</h2>
+  <p>The following is saved in the app's storage on your Android phone:</p>
+  <ul>
+    <li><strong>Profile:</strong> the display name and email address shown in your profile, and an optional profile photo</li>
+    <li><strong>Dietary and allergen preferences:</strong> allergies, intolerances, diet type (for example vegan or halal), health goals, nutrient thresholds and ingredient alerts</li>
+    <li><strong>Household members:</strong> names and allergies you add for other people</li>
+    <li><strong>Scan history, favourites and shopping lists:</strong> products you have scanned or saved, with their scores and dates. History keeps up to 50 scans on the free plan and up to 200 with Premium.</li>
+    <li><strong>App settings:</strong> theme, text size, notification preferences and similar settings</li>
+    <li><strong>Device credential:</strong> an anonymous credential that lets the app authenticate with our server, kept in secure storage provided by Android (Keystore-backed storage).</li>
+  </ul>
+  <p>We do not send your profile, dietary or allergen preferences, household members, profile photo, scan history, favourites or shopping lists to our server. Allergy warnings are calculated on your phone.</p>
+
+  <h2>3. Information sent to our server</h2>
+  <p>Our backend is hosted by Railway in the United States. When you use the app, it sends:</p>
+  <ul>
+    <li><strong>Product details</strong> such as name, brand, barcode, ingredients and nutrition values, so the product can be scored and analysed.</li>
+    <li><strong>Photos you choose to scan</strong>, including product photos, label photos and shelf images. Photos are processed in memory and forwarded to Google Gemini (see section 5). Our server does not write them to its database or disk and does not log them.</li>
+    <li><strong>Products you add.</strong> If you add a missing product, the details you enter (barcode, name, brand, quantity, category, ingredients and nutrition values) are saved to a shared product database that other users can see. These entries do not include your name, email or any account identifier. Entries are screened automatically, and entries with objectionable text are held and are not shown to others. When you submit a product, our server sends its details to Google Gemini to check them for accuracy, whether or not AI features are turned on. A copy is also cached on your phone so it appears straight away.</li>
+    <li><strong>Product reports.</strong> If you use the "Is this information wrong?" feature, the app sends the product barcode, the issue type you selected, your optional note (up to 500 characters) and the time of submission. We store this to review and correct product data. <strong>We do not store your name, email address, account identifier, device identifier or IP address with a report.</strong> The note should describe the product issue only and should not contain personal information.</li>
+    <li><strong>Your device credential</strong> with each request, so we can authenticate the app and apply daily limits.</li>
+    <li><strong>Search phrases on the free plan.</strong> To count your 5 free searches a day without counting a repeated search twice, the app sends each search phrase to our server, which keeps that day's phrases in server memory only, with the hash of your device credential, for at most two days.</li>
+  </ul>
+  <p>For each device, our database keeps a <strong>device record</strong> containing:</p>
+  <ul>
+    <li>a one-way SHA-256 hash of the device credential (never the credential itself)</li>
+    <li>a <strong>billing ID</strong>: a random identifier we create to link subscription status to your device. It is not derived from your name or email.</li>
+    <li>today's photo and analysis counts, which are overwritten each day</li>
+    <li>whether the device is a guest, and when the record was created, last used, expires or was revoked</li>
+  </ul>
+  <p>Our hosting provider also records standard access logs for requests to our server, such as IP address, request path, time and app version.</p>
+  <p>This version of the app for Android does not offer sign-in with an Apple or Google account, and it does not request or store a push notification token. Reminders are scheduled on your phone.</p>
+
+  <h2>4. Android permissions</h2>
+  <ul>
+    <li><strong>Camera:</strong> used only to scan barcodes and to take the product and shelf photos you choose to scan. If you decline, you can still search and enter a barcode manually.</li>
+    <li><strong>Notifications:</strong> optional. Used only for streak reminders that are scheduled on your phone.</li>
+    <li><strong>Internet:</strong> to look up products and contact our server.</li>
+    <li><strong>Vibration and start-up:</strong> haptic feedback, and restoring scheduled reminders after your phone restarts.</li>
+    <li><strong>Photos:</strong> if you pick a photo from your gallery, it is chosen through the Android system picker. The app does not request broad access to your photos or storage.</li>
+  </ul>
+
+  <h2>5. How we use information</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Purpose</th><th>Information used</th></tr>
+      <tr><td>Scoring and analysing products</td><td>Product details, sent to Google Gemini, Tavily and product databases (section 6)</td></tr>
+      <tr><td>Identifying products from photos</td><td>The photo you take, sent to Google Gemini</td></tr>
+      <tr><td>Filling in missing products for everyone</td><td>Product details you submit</td></tr>
+      <tr><td>Reviewing and correcting product data</td><td>Product report: barcode, issue type, note and timestamp (no personal identifier)</td></tr>
+      <tr><td>Authenticating the app and applying daily limits</td><td>Device record, and search phrases on the free plan</td></tr>
+      <tr><td>Checking whether you have Premium</td><td>Billing ID, checked with RevenueCat</td></tr>
+      <tr><td>Fixing crashes and errors</td><td>Diagnostic data sent to Sentry</td></tr>
+      <tr><td>Allergy and diet warnings</td><td>Your preferences, on your phone only</td></tr>
+    </table>
+  </div>
+
+  <h2>6. Service providers and third parties</h2>
+  <p>We share information only as described below. Each provider handles data under its own terms and privacy policy.</p>
+
+  <p><strong>AI features are optional.</strong> The app asks before using them. You can turn them off at any time in <strong>Profile → AI features</strong>. With AI off, the app does not send product details or photos to AI or web-search providers, except when you add a missing product (see "Products you add" in section 3). Barcode scans still show basic scores when product data is available.</p>
+
+  <h3>Google Gemini (AI analysis)</h3>
+  <p>Our server sends product details, and the photos and shelf images you choose to scan, to Google's Gemini API to generate scores, analyses and product identifications. We do not include your name, email, dietary profile or household members. Google processes this content under the Gemini API terms, which allow Google to keep submitted content for a limited time, for example for abuse monitoring. We do not control how long Google keeps it.</p>
+  <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+  <h3>Google Play (purchases)</h3>
+  <p>Premium subscriptions are sold through Google Play Billing. Google Play processes your payment and manages your subscription under Google's terms. We do not receive your card or payment details.</p>
+
+  <h3>RevenueCat (subscriptions)</h3>
+  <p>We use RevenueCat to verify in-app subscriptions. The app identifies itself to RevenueCat with your billing ID. RevenueCat receives purchase and subscription information from Google Play, along with technical information such as app version, platform and IP address. Our server asks RevenueCat whether a billing ID has an active subscription. RevenueCat does not receive your dietary profile, scan history or health preferences.</p>
+  <p><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></p>
+
+  <h3>Tavily (web search)</h3>
+  <p>To find reviews, product information or alternatives, our server may send product names, brands, barcodes and search phrases to Tavily, a web search service. No personal information is included.</p>
+  <p><a href="https://tavily.com/privacy" target="_blank" rel="noopener">Tavily Privacy Policy</a></p>
+
+  <h3>Open Food Facts and Open Beauty Facts</h3>
+  <p>The app looks up products directly from Open Food Facts and Open Beauty Facts, using barcodes, categories and search terms. Because these requests come from your phone, those services can see your IP address, as with any website request.</p>
+  <p><a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">Open Food Facts Privacy Policy</a></p>
+
+  <h3>USDA FoodData Central</h3>
+  <p>When a product isn't found elsewhere, our server may look up its barcode in the U.S. Department of Agriculture's FoodData Central database. Only the barcode is sent.</p>
+
+  <h3>Sentry (error monitoring)</h3>
+  <p>The app sends crash reports and error reports to Sentry. These can include device model, Android version, app version, the screens and actions leading up to an error, error messages, and the addresses of network requests the app made. Those addresses can contain product names, barcodes or search terms. Sentry may also process your IP address. We do not intentionally send your name, email, dietary profile, household members or photos to Sentry.</p>
+  <p>Our server also sends its own error reports to Sentry. These contain the error and the server route it happened on. They do not include your device credential, photos or the contents of your requests.</p>
+  <p><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy</a></p>
+
+  <h3>Railway (hosting)</h3>
+  <p>Our server and database run on Railway in the United States. Railway stores the device records described in section 3 and keeps access logs.</p>
+  <p><a href="https://railway.com/legal/privacy" target="_blank" rel="noopener">Railway Privacy Policy</a></p>
+
+  <h3>Expo (app updates)</h3>
+  <p>The app downloads updates from Expo's servers. Expo can see your IP address when the app contacts it.</p>
+  <p><a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></p>
+
+  <h2>7. What we don't do</h2>
+  <ul>
+    <li>We do not sell your personal information.</li>
+    <li>The app contains no ads, and we do not use advertising identifiers or track you across other companies' apps or websites.</li>
+    <li>We do not collect your location, contacts or browsing history.</li>
+  </ul>
+
+  <h2>8. Data retention</h2>
+  <ul>
+    <li><strong>On your phone:</strong> kept until you delete it, delete your account in the app, or uninstall the app.</li>
+    <li><strong>Device records:</strong> device credentials expire after 90 days without use. A guest credential that is never used expires after 30 days. Revoked or expired device records may be retained for security, fraud prevention, operational integrity and legal compliance.</li>
+    <li><strong>Daily counts:</strong> only the current day's count is kept; it is overwritten each day.</li>
+    <li><strong>Products you add:</strong> kept in the shared product database.</li>
+    <li><strong>Product reports:</strong> kept until we have reviewed and acted on the report. We may retain aggregated statistics (report counts per product) afterwards.</li>
+    <li><strong>Free-plan search phrases and temporary analysis caches:</strong> held in server memory only and cleared when the server restarts. Search phrases are also cleared within two days.</li>
+    <li><strong>Service providers:</strong> Google, Tavily, RevenueCat, Sentry, Railway and Expo keep data according to their own retention policies.</li>
+  </ul>
+
+  <h2>9. Deleting your data and account</h2>
+  <p>You can delete your account in the app: <strong>Profile → side menu → Delete account</strong>. If you cannot open the app, see <a href="../delete-account/index.html">how to delete your account (Android)</a>. When you delete it in the app:</p>
+  <ul>
+    <li>The data stored on your phone (profile, preferences, household members, history, favourites, lists and settings) is erased.</li>
+    <li>Your device credential is revoked on our server, so it can no longer be used.</li>
+    <li>Server-side device records, including the billing ID, may be retained in revoked form for security, fraud prevention, auditing and legal purposes.</li>
+    <li>Records held by RevenueCat, Google and other service providers are kept under their own policies.</li>
+    <li><strong>Deleting your account does not cancel a subscription.</strong> Cancel it in the Play Store: profile icon → Payments &amp; subscriptions → Subscriptions → Super Scanny.</li>
+  </ul>
+  <p>To ask about your data, or to request deletion of server-side records, email <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a>. We will respond within a reasonable time and as required by applicable law.</p>
+
+  <h2>10. Children's privacy</h2>
+  <p>Super Scanny is intended for adults (18 and over) and is not directed at children. We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us and we will delete it.</p>
+
+  <h2>11. International transfers and security</h2>
+  <p>Our server and several of our service providers are located in the United States. By using the app, you understand that the information described in this policy may be processed in the United States. Data sent between the app and our server is encrypted in transit using HTTPS (TLS).</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. For significant changes, we will notify you in the app.</p>
+
+  <h2>13. Contact us</h2>
+  <div class="note">
+    <p><strong>Email:</strong> <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a><br>
+    <strong>App:</strong> Super Scanny for Android<br>
+    <strong>Website:</strong> <a href="../../index.html">Super Scanny home</a></p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="../../index.html"><img src="../../icon.png" alt="" width="34" height="34">Super Scanny</a>
+      <p>Independent health scores for food and cosmetics. No ads, no brand deals.</p>
+    </div>
+    <nav class="foot-col" aria-label="Legal">
+      <b>Legal (Android)</b>
+      <a href="../privacy/index.html">Privacy Policy</a>
+      <a href="../terms/index.html">Terms of Service</a>
+      <a href="../delete-account/index.html">Delete your account</a>
+    </nav>
+    <div class="foot-col">
+      <b>Support</b>
+      <a href="mailto:mitec.org@gmail.com">mitec.org@gmail.com</a>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© 2026 Super Scanny</span>
+    <span>Made for Android</span>
+  </div>
+</footer>
+
+</body>
+</html>
